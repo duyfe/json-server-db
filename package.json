@@ -8,10 +8,6 @@
     "dev": "node generate-data.js && nodemon index.js",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/duyfe/json-server-db.git"
-  },
   "keywords": [
     "json-server",
     "fake-db"
