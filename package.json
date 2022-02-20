@@ -1,0 +1,32 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node generate-data.js && nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/duyfe/json-server-db.git"
+  },
+  "keywords": [
+    "json-server",
+    "fake-db"
+  ],
+  "author": "duyfe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duyfe/json-server-db/issues"
+  },
+  "homepage": "https://github.com/duyfe/json-server-db#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
