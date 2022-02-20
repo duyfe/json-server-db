@@ -8,7 +8,7 @@ function generateCategories(n) {
 
   Array.from(new Array(n)).forEach(() => {
     categoryList.push({
-      id: faker.random.uuid(),
+      id: faker.datatype.uuid(),
       name: faker.commerce.department()
     })
   })
@@ -22,7 +22,7 @@ function generateProducts(categories = [], n) {
   categories.forEach(cat => {
     Array.from(new Array(n)).forEach(() => {
       productList.push({
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         name: faker.commerce.product(),
         image: faker.image.nature(),
         price: faker.commerce.price(),

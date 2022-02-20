@@ -19,6 +19,9 @@
 ```bash
   // run dev server
   $ npm run dev
+
+  // start server
+  $ npm start
 ```
 - Default apiUrl: http://0.0.0.0:1234/api
 
