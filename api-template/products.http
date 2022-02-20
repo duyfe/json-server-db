@@ -1,0 +1,23 @@
+
+@baseURL = http://0.0.0.0:1234/api
+
+# @name getAllProducts
+GET {{baseURL}}/products
+
+###
+
+# @name addProduct
+POST {{baseURL}}/products
+Content-Type: application/json
+
+{
+  "id": "1754289d-2979-4f74-922b-d4b375882126",
+  "name": "Bike",
+  "image": "http://placeimg.com/640/480/nature",
+  "price": "972.00",
+  "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+}
+
+###
+# @name getProduct
+GET {{baseURL}}/products/1754289d-2979-4f74-922b-d4b375882126

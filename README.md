@@ -9,6 +9,10 @@
     profile: {}
   }
 ```
+## Test API with VSCode
+- Extension: [REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+- Directory: `api-template/*.http`
+
 
 ## Development
 
