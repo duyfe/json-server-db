@@ -6,18 +6,30 @@ faker.locale = "vi"
 function generateCategories(n) {
   const categoryList = []
 
+  const now = new Date()
+
   Array.from(new Array(n)).forEach(() => {
     categoryList.push({
       id: faker.datatype.uuid(),
-      name: faker.commerce.department()
+      name: faker.commerce.department(),
+      createdAt: now.getTime(),
+      updateAt: now.getTime()
     })
   })
 
   return categoryList
 }
 
+function generateAdmin() {
+  return {
+    "email": "admin@admin.com",
+    "password": "admin"
+  }
+}
+
 function generateProducts(categories = [], n) {
   const productList = []
+  const now = new Date()
 
   categories.forEach(cat => {
     Array.from(new Array(n)).forEach(() => {
@@ -28,7 +40,9 @@ function generateProducts(categories = [], n) {
         price: faker.commerce.price(),
         description: faker.commerce.productDescription(),
         color: faker.commerce.color(),
-        categoryId: cat.id
+        categoryId: cat.id,
+        createdAt: now.getTime(),
+        updateAt: now.getTime()
       })
     })
   })
@@ -41,11 +55,7 @@ function generateProducts(categories = [], n) {
   const db = {
     categories: [],
     products: [],
-    profile: {
-      name: faker.name.findName(),
-      phone: faker.phone.phoneNumber(),
-      avatar: faker.image.avatar()
-    }
+    users: []
   }
 
   const categoryList = generateCategories(10)

@@ -1,7 +1,9 @@
 @baseURL = http://0.0.0.0:1234/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiaWF0IjoxNjQ1MzQ2Mjg0LCJleHAiOjE2NDUzNDk4ODQsInN1YiI6IjEifQ.IENwxBXhVCwlaXpIKDe3uaRYSVbvYLZpwFfPUIlNBO0
 
 # @name getAllCategories
 GET {{baseURL}}/categories
+Authorization: Bearer {{token}}
 
 ###
 

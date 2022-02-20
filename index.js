@@ -3,6 +3,7 @@ const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
+const auth = require('json-server-auth')
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares)
@@ -23,10 +24,17 @@ server.use((req, res, next) => {
   // Continue to JSON Server router
   next()
 })
-
+server.db = router.db
+server.use(auth)
+// const rules = auth.rewriter({
+//   // Permission rules
+//   users: 600,
+//   messages: 640,
+// })
+// server.use(rules)
 // Use default router
-const port = process.env.PORT || 1234
 server.use('/api', router)
+const port = process.env.PORT || 1234
 server.listen(port, '0.0.0.0' ,() => {
   console.log(`JSON Server is running with port: ${port}`)
 })

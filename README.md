@@ -6,13 +6,34 @@
   {
     categories: [],
     products: [],
-    profile: {}
+    users: []
   }
 ```
 ## Test API with VSCode
 - Extension: [REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 - Directory: `api-template/*.http`
 
+### Authorization
+  - first register user at `api-template/auth.http`
+  - register
+  ```bash
+    POST /users/register
+    {
+      "email": "example@mail.com",
+      "password": "password",
+      "firstname": "Duy",
+      "lastname": "Pham",
+      "age": 30
+    }
+  ```
+  - signin
+  ```bash
+    POST /users/signin
+    {
+      "email": "example@mail.com",
+      "password": "password"
+    }
+  ```
 
 ## Development
 
@@ -24,15 +45,3 @@
   $ npm start
 ```
 - Default apiUrl: http://0.0.0.0:1234/api
-
-## API List
-| Method | path | result | note |
-| ------ | ----------- | ------ | ----- |
-| GET | /categories | [] | get all categories |
-| GET | /categories/:id | {} | get category detail |
-| PATCH | /categories/:id | {} | update category |
-| DELETE | /categories/:id | {} | delete category |
-| GET | /products | [] | get all products|
-| GET | /products/:id | {} | get product detail |
-| PATCH | /products/:id | {} | update product |
-| DELETE | /products/:id | {} | delete product |

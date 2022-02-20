@@ -1,0 +1,23 @@
+@baseURL = http://0.0.0.0:1234/api
+
+# @name register
+POST {{baseURL}}/users/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "admin@mail.com",
+  "password": "admin"
+}
+
+###
+
+# @name signin
+POST {{baseURL}}/users/signin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "admin@mail.com",
+  "password": "admin"
+}
