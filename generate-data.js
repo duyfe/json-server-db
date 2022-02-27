@@ -58,7 +58,7 @@ function generateProducts(categories = [], n) {
     users: []
   }
 
-  const categoryList = generateCategories(10)
+  const categoryList = generateCategories(50)
   const productList = generateProducts(categoryList, 10)
 
   db.categories = categoryList
